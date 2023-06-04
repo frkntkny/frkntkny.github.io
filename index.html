@@ -75,15 +75,23 @@
         margin: 0 10px;
         font-size: 30px;
       }
-      @media only screen and (orianation: portrait) {
+      @media only screen and (max-width: 1000px) {
         /* Styles for screens smaller than 768px */
-        #main_div_1, 
+        #main_div_1,
         #main_div_2,
         #main_div_3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          float: left;
           width: 75vw;
+          font-size: 25px;
+        }
+        nav li {
+          margin: 0 5px;
+          font-size: 40px;
         }
       }
-
     </style>
   </head>
   <header>
