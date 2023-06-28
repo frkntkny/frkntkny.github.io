@@ -1,0 +1,65 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e6e6e6;
+  }
+
+  #main_div_1,
+  #main_div_2,
+  #main_div_3 {
+    background: linear-gradient(to right, #e6e6e6, white);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0 0 0;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    float: left;
+    border-left: 5px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  * {
+    font-family: "Share Tech Mono", monospace;
+  }
+  #body {
+    line-height: 1.5;
+  }
+
+  .highlight {
+    background-color: black;
+    color: white;
+    padding: 1.7px;
+  }
+  h1 {
+    font-size: 3rem;
+    border-bottom: 1px solid black;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 0 10px;
+    font-size: 30px;
+  }
+
+  img {
+    border-radius: 20%;
+    border: 5px solid black;
+  }
