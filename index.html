@@ -19,13 +19,16 @@
   <body id="body">
     <div class="parentDiv">
       <header class="d-flex justify-content-center py-5">
-        <nav class="text-center">
-          <ul>
-            <li><button id="link1">Hello</button></li>
-            <li><button id="link2">Data</button></li>
-            <li><button id="link3">Portfolio</button></li>
-          </ul>
-        </nav>
+   
+   
+
+            
+            <button type="button" id="link1" class="btn btn-dark btn-lg mx-2">About me</button>
+            <button type="button" id="link2" class="btn btn-dark btn-lg mx-2">My Data</button>
+            <button type="button" id="link3" class="btn btn-dark btn-lg mx-2">My Portfolio</button>
+           
+          
+    
       </header>
 
       <main>
@@ -224,21 +227,19 @@
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.cells.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
     <script>
-      VANTA.CELLS({
+      VANTA.BIRDS({
         el: "#body",
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        color2: 0xff,
-        size: 0.5,
-        speed: 2.2,
-      });
-    </script>
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+      })
+      </script>
     <script src="./app.js"></script>
   </body>
 </html>
