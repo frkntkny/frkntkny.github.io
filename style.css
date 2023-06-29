@@ -22,10 +22,9 @@
 
 
 header{
-  height: 200px;
+  height: 150px;
+  color: #fff;
 }
-
-
 * {
   font-family: "Share Tech Mono", monospace;
 }
