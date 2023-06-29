@@ -17,7 +17,14 @@
   border-bottom: 2px solid black;
   overflow-y: scroll;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  
 }
+
+
+header{
+  height: 200px;
+}
+
 
 * {
   font-family: "Share Tech Mono", monospace;
