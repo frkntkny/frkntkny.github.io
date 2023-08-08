@@ -175,17 +175,36 @@
               -> <span class="highlight">Databases</span> : MySQL, MongoDB, Firebase, SQLite <br/>
               -> <span class="highlight">Tools</span> :  Git, Github, Gitlab, Jupyter Notebook, Google Colab, Anaconda, Pycharm, Visual Studio Code, Tableu <br/>
               <hr>
+
+              <!-- PORTFOLIO  -->
+                    <span class="highlight"> Puzzlo.me</span>
+              <div class="container">
+                <div class="row">
+                  <div id="image4col" class="col col-4">
+                    
+                    <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2" alt="...">
+                  </div>
+                  <div class="col col-8">
+                    &nbsp;|-> ReactJS, MongoDB, Express.js, Node.js <br>
+                    &nbsp;|-> Puzzlo is an intriguing and user-friendly game. </br>
+                    &nbsp;|-> Players must discover the daily pin or password to increase their score, based on the time of discovery within the day.<br>
+                    <a href="https://puzzlo.me/" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span>Go to the website</a>
+                  </div>
+                </div>
+              </div>
+
+
+
               <span class="highlight"> Developing a Real-time House Collapse Tracking Website for Disaster Relief Based on Manual Input</span>
               <div class="container">
                 <div class="row">
-                  <div id="image1col" class="col col-4">
+                  <div id="image1col" class="col col-4 imagePortfolioCol">
                   <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2" alt="..." >
                   </div>
                   <div class="col my-2 col-8">
-                    &nbsp;|-> Vue.Js, MongoDB, Express.js, Node.js, D3.js, Tenserflow <br>
+                    &nbsp;|-> VueJS, MongoDB, Express.js, Node.js, D3.js, Tenserflow <br>
                     &nbsp;|-> Developing a full-stack web application involves visualizing and analyzing data, as well as implementing machine learning algorithm. <br>
                     &nbsp;|-> Master Dissertation Project <br>
-                    &nbsp;|-> Currently in the development stage<br>
                   </div>
                 </div>
               </div>
@@ -194,7 +213,7 @@
               <div class="container">
                 <div class="row">
                   <div id="image2col" class="col col-4">
-                    <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2 d-none d-md-block" alt="..." >
+                    <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2 " alt="..." >
                   </div>
                   <div class="col col-8">
                     &nbsp;|-> HTML, CSS, D3.js, Tableau, R <br>
@@ -221,6 +240,23 @@
                 </div>
               </div>
 
+              <!-- SAMPLE  -->
+              <!-- <span class="highlight"> TITLE </span>
+              <div class="container">
+                <div class="row">
+                  <div id="image3col" class="col col-4">
+                    
+                    <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2" alt="...">
+                  </div>
+                  <div class="col col-8">
+                    &nbsp;|-> ... <br>
+                    &nbsp;|-> ... <br>
+                    &nbsp;|-> ... <br>
+                    <a href="https://nano-mascot.netlify.app/" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span>Go to the website</a>
+                  </div>
+                </div>
+              </div> -->
+
          
 
 
@@ -243,15 +279,17 @@
       //page on load
       /// console log pahe width each timee when its changed
       window.addEventListener("resize", function () {
-        // if the width is less than 1200 apply clss hide to the div
+        // if the width is less than 1200 apply clss hide to the div imagePortfolioCol class
         if (window.innerWidth < 1200) {
           document.getElementById("image1col").style.display = "none";
           document.getElementById("image2col").style.display = "none";
           document.getElementById("image3col").style.display = "none";
+          document.getElementById("image4col").style.display = "none";
         } else {
           document.getElementById("image1col").style.display = "block";
           document.getElementById("image2col").style.display = "block";
           document.getElementById("image3col").style.display = "block";
+          document.getElementById("image4col").style.display = "block";
         }
       });
 
