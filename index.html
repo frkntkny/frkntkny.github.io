@@ -176,22 +176,52 @@
               -> <span class="highlight">Tools</span> :  Git, Github, Gitlab, Jupyter Notebook, Google Colab, Anaconda, Pycharm, Visual Studio Code, Tableu <br/>
               <hr>
               <span class="highlight"> Developing a Real-time House Collapse Tracking Website for Disaster Relief Based on Manual Input</span>
-              &nbsp;|-> Vue.Js, MongoDB, Express.js, Node.js, D3.js, Tenserflow <br>
-              &nbsp;|-> Developing a full-stack web application involves visualizing and analyzing data, as well as implementing machine learning algorithms. <br>
-              &nbsp;|-> Master Dissertation Project <br>
-              &nbsp;|-> Currently in the development stage<br>
+              <div class="container">
+                <div class="row">
+                  <div id="image1col" class="col col-4">
+                  <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2" alt="..." >
+                  </div>
+                  <div class="col my-2 col-8">
+                    &nbsp;|-> Vue.Js, MongoDB, Express.js, Node.js, D3.js, Tenserflow <br>
+                    &nbsp;|-> Developing a full-stack web application involves visualizing and analyzing data, as well as implementing machine learning algorithm. <br>
+                    &nbsp;|-> Master Dissertation Project <br>
+                    &nbsp;|-> Currently in the development stage<br>
+                  </div>
+                </div>
+              </div>
+             
               <span class="highlight"> UK Housing Market Visualisation</span>
-              &nbsp;|-> HTML, CSS, D3.js, Tableau, R <br>
-              &nbsp;|-> An interactive web application that provides insights into the UK housing market.<br>
-              &nbsp;|-> Utilizes the comprehensive UK-HPI-full-file-2022-12.csv file, featuring around 140,000 data points, 54 columns, and 421 unique regions <br>
-               <a href="https://ukhousingmarket.netlify.app" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span>Go to the website</a>
-              <span class="highlight"> Nano Mascot Generator</span>
-              &nbsp;|-> React.js, HTML, CSS, Bootstrap, and JavaScript <br>
-              &nbsp;|-> A web application that generates a nano mascots representing Nano Coin(XNO)<br>
-              &nbsp;|-> Showcases support for Nano Coin and crypto enthusiasm <br>
-              <a href="https://nano-mascot.netlify.app/" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span>Go to the website</a>
-         
+              <div class="container">
+                <div class="row">
+                  <div id="image2col" class="col col-4">
+                    <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2 d-none d-md-block" alt="..." >
+                  </div>
+                  <div class="col col-8">
+                    &nbsp;|-> HTML, CSS, D3.js, Tableau, R <br>
+                    &nbsp;|-> An interactive web application that provides insights into the UK housing market.<br>
+                    &nbsp;|-> Utilizes the comprehensive UK-HPI-full-file-2022-12.csv file, featuring around 140,000 data points, 54 columns, and 421 unique regions <br>
+                    <a href="https://ukhousingmarket.netlify.app" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span>Go to the website</a>
+          
+                  </div>
+                </div>
+              </div>
 
+             <span class="highlight"> Nano Mascot Generator</span>
+              <div class="container">
+                <div class="row">
+                  <div id="image3col" class="col col-4">
+                    <img src="https://w.wallhaven.cc/full/k7/wallhaven-k7p2z7.jpg" class="img-fluid my-2" alt="...">
+                  </div>
+                  <div class="col col-8">
+                    &nbsp;|-> React.js, HTML, CSS, Bootstrap, and JavaScript <br>
+                    &nbsp;|-> A web application that generates a nano mascots representing Nano Coin(XNO)<br>
+                    &nbsp;|-> Showcases support for Nano Coin and crypto enthusiasm <br>
+                    <a href="https://nano-mascot.netlify.app/" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span>Go to the website</a>
+                  </div>
+                </div>
+              </div>
+
+         
 
 
 
@@ -211,6 +241,22 @@
     </div>
     <script>
       //page on load
+      /// console log pahe width each timee when its changed
+      window.addEventListener("resize", function () {
+        console.log(window.innerWidth);
+        // if the width is less than 1200 apply clss hide to the div
+        if (window.innerWidth < 1200) {
+          document.getElementById("image1col").style.display = "none";
+          document.getElementById("image2col").style.display = "none";
+          document.getElementById("image3col").style.display = "none";
+        } else {
+          document.getElementById("image1col").style.display = "block";
+          document.getElementById("image2col").style.display = "block";
+          document.getElementById("image3col").style.display = "block";
+        }
+      });
+
+     
       window.onload = function () {
         document.getElementById("divShow1").style.display = "block";
         document.getElementById("divShow2").style.display = "none";
