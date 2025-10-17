@@ -199,13 +199,17 @@ header {
   background: var(--container-bg);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle) !important;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   font-size: 1.25rem;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   transition: var(--transition-smooth);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   cursor: pointer;
+}
+
+.theme-toggle span {
+  color: var(--text-primary) !important;
 }
 
 .theme-toggle:hover {
@@ -221,6 +225,11 @@ header {
 [data-theme="dark"] .theme-toggle {
   background: rgba(44, 44, 46, 0.8);
   border-color: var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .theme-toggle span {
+  color: var(--text-primary) !important;
 }
 
 /* Main Content Containers - Glass Morphism Design */
@@ -310,16 +319,26 @@ img[alt="Furkan Tekinay"]:hover {
 
 /* Data Stats Cards */
 .data-stat {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0.5rem 0;
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(210, 210, 215, 0.2);
   width: 100%;
   transition: var(--transition-smooth);
+  gap: 1rem;
+}
+
+.data-stat .highlight {
+  margin-left: auto;
+  text-align: right;
+  flex-shrink: 0;
 }
 
 .data-stat:hover {
   padding-left: 1rem;
+  padding-right: 1rem;
   background: var(--data-stat-hover);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);

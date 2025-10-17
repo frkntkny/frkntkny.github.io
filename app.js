@@ -86,6 +86,20 @@ navLinks.forEach((link, index) => {
   });
 });
 
+// Close mobile menu when clicking on page content
+document.addEventListener("click", function (e) {
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  const navbar = document.querySelector(".navbar");
+
+  // Check if click is outside navbar and menu is open
+  if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+    if (!navbar.contains(e.target)) {
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      bsCollapse.hide();
+    }
+  }
+});
+
 // Performance optimization: Reduce animations on low-end devices
 if (navigator.hardwareConcurrency <= 2) {
   document.documentElement.style.setProperty("--transition-smooth", "all 0.2s ease");
