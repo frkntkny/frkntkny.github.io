@@ -276,6 +276,10 @@ h1 {
   border-radius: 4px;
   font-weight: 500;
   transition: var(--transition-smooth);
+  white-space: nowrap; /* Prevent text from breaking to next line */
+  display: inline-block; /* Keep highlight together as one block */
+  margin: 0.15rem 0.2rem; /* Add spacing - vertical (top/bottom) and horizontal (left/right) */
+  line-height: 1.6; /* Add breathing room between lines */
 }
 
 [data-theme="dark"] .highlight {
