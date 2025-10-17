@@ -18,11 +18,52 @@
   </head>
   <body id="body">
     <div class="parentDiv">
-      <header class="d-flex justify-content-center py-5"> 
-            <button type="button" id="link1" class="btn btn-dark btn-lg mx-3 px-5">About me</button>
-            <button type="button" id="link2" class="btn btn-dark btn-lg mx-3 px-5">My Data</button>
-            <button type="button" id="link3" class="btn btn-dark btn-lg mx-3 px-5">My Portfolio</button>         
-      </header>
+      <!-- Modern Navigation Bar -->
+      <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container-fluid px-3 px-lg-5">
+          <!-- Brand/Logo -->
+          <a class="navbar-brand" href="#" id="brandLink" style="font-weight: 600; font-size: 1.25rem; color: var(--text-primary);">
+            FT
+          </a>
+          
+          <!-- Theme Toggle Button (Desktop - shown in navbar) -->
+          <button type="button" class="btn btn-sm ms-auto me-3 d-none d-lg-inline-flex order-lg-3 theme-toggle" title="Toggle Dark/Light Mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+          
+          <!-- Mobile Hamburger -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                  style="padding: 0.5rem; font-size: 1.5rem;">
+            <span style="color: var(--text-primary);">☰</span>
+          </button>
+          
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link px-3 px-lg-4 active" href="#" id="link1" data-target="divShow1">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 px-lg-4" href="#" id="link2" data-target="divShow2">My Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 px-lg-4" href="#" id="link3" data-target="divShow3">Portfolio</a>
+              </li>
+            </ul>
+            
+            <!-- Theme Toggle for Mobile -->
+            <div class="d-lg-none mt-3 mb-2 text-center">
+              <button type="button" class="btn btn-sm theme-toggle" title="Toggle Dark/Light Mode">
+                <span class="theme-icon">🌙</span> <span style="font-size: 0.875rem;">Toggle Theme</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Add spacing for fixed navbar -->
+      <div style="height: 80px;"></div>
 
       <main>
         <div id="divShow1" class="container slide-in-elliptic-top-fwd">
@@ -30,262 +71,113 @@
             <img
               src="photo_1.png"
               alt="Furkan Tekinay"
-              width="300"
-              height="300"
+              width="180"
+              height="180"
             />
           
-            <p id="paragraph_1">
-              <br>
-                👋 Hey there! <br>
+            <div style="max-width: 800px; margin: 0 auto;">
+              <div style="text-align: center; padding: 2rem 0; font-size: 1.1rem; line-height: 1.8;">
+                👋 Hey there! <br><br>
                 I'm <span class="highlight">Furkan</span>, 
-                a 🎓 proud graduate with Merit from the <span class="highlight"> MSc Data-intense Analysis </span>  at the  <span class="highlight"> University of St Andrews </span>.
-                Now, working as a 🌳  <span class="highlight">BIFoR Data Manager </span> at the <span class="highlight"> University of Birmingham </span>. 
+                a 🎓 proud graduate with Merit from the <span class="highlight">MSc Data-intense Analysis</span> at the <span class="highlight">University of St Andrews</span>.
+                Now, working as a 🌳 <span class="highlight">BIFoR Data Manager</span> at the <span class="highlight">University of Birmingham</span>. 
+                <br><br>
+                I'm passionate about 📊 <span class="highlight">data science</span> and 🌐 <span class="highlight">web development</span>. 
+                Excited to create innovative solutions and explore the possibilities these fields offer! Let's connect and make awesome things happen! 🚀
+              </div>
+
+              <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Contact</h2>
+              <div class="data-stat">→ Email : <a href="mailto:tekinayfurkan@gmail.com" style="color: inherit;"><span class="highlight">tekinayfurkan@gmail.com</span></a></div>
               
-               <br><br >
-                I'm passionate about  📊 <span class="highlight">data science</span> and 🌐 <span class="highlight"> 
-                web development</span>. Excited to create innovative solutions and explore the possibilities these 
-                fields offer! Let's connect and make awesome things happen! 🚀
-             <br>
-              <br />
-              -> Contact me :
-              <a class="highlight" href="mailto:tekinayfurkan@gmail.com">tekinayfurkan@gmail.com</a><br />
-              <br />
-              -> Personality Type :
-              <span class="highlight">Logistician (ISTJ-A)</span> <br />
-              &nbsp;|-> Introverted : <span class="highlight">52%</span> <br />
-              &nbsp;|-> Observant : <span class="highlight">63%</span> <br />
-              &nbsp;|-> Thinking : <span class="highlight">61%</span> <br />
-              &nbsp;|-> Judging : <span class="highlight">57%</span> <br />
-              &nbsp;|-> Assertive : <span class="highlight">68%</span> <br />
-              
-              <br />
+              <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Personality Type</h2>
+              <div class="data-stat">→ Type : <span class="highlight">Logistician (ISTJ-A)</span></div>
+              <div class="data-stat">&nbsp;&nbsp;&nbsp;→ Introverted : <span class="highlight">52%</span></div>
+              <div class="data-stat">&nbsp;&nbsp;&nbsp;→ Observant : <span class="highlight">63%</span></div>
+              <div class="data-stat">&nbsp;&nbsp;&nbsp;→ Thinking : <span class="highlight">61%</span></div>
+              <div class="data-stat">&nbsp;&nbsp;&nbsp;→ Judging : <span class="highlight">57%</span></div>
+              <div class="data-stat">&nbsp;&nbsp;&nbsp;→ Assertive : <span class="highlight">68%</span></div>
 
-              -> Swift Executive Aptitude Test Result : <br />
-              &nbsp;|-> Verbal : <span class="highlight">79%</span> <br />
-              &nbsp;|-> Numerical : <span class="highlight">73%</span> <br />
-              &nbsp;|-> Abstract : <span class="highlight">69%</span> <br />
-              &nbsp;|-> Total : <span class="highlight">79%</span> 
-              <br />
+              <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Swift Executive Aptitude Test</h2>
+              <div class="data-stat">→ Verbal : <span class="highlight">79%</span></div>
+              <div class="data-stat">→ Numerical : <span class="highlight">73%</span></div>
+              <div class="data-stat">→ Abstract : <span class="highlight">69%</span></div>
+              <div class="data-stat">→ Total : <span class="highlight">79%</span></div>
 
-              <br />
-              -> Match 6.5 Candidate Report Result : <br />
-              &nbsp;|-> Core talents :
-              <span class="highlight">Creating Innovartion </span> &
-              <span class="highlight">Evaluating Problems</span> <br />
-              &nbsp;|-> Challenging area :
-              <span class="highlight">Structuring Tasks</span> <br />
+              <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Match 6.5 Candidate Report</h2>
+              <div class="data-stat">→ Core talents : <span class="highlight">Creating Innovation</span> & <span class="highlight">Evaluating Problems</span></div>
+              <div class="data-stat">→ Challenging area : <span class="highlight">Structuring Tasks</span></div>
 
-
-              <br />
-              -> My favorites : <br />
-              &nbsp;|-> quote :
-              <span class="highlight">"Whatever you are, be a good one."</span>
-              <br />
-              &nbsp;|-> song :
-              <span class="highlight">"Feeling Good"</span>
-              <br />
-              &nbsp;|-> movie :
-              <span class="highlight">"Now You See Me"</span> <br />
-              &nbsp;|-> series : <span class="highlight">"Silicon Valley"</span>
-              <br />
-              &nbsp;|-> book : <span class="highlight">"The Alchemist"</span> by
-              Paulo Coelho <br />
-            </p>
+              <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">My Favorites</h2>
+              <div class="data-stat">→ Quote : <span class="highlight">"Whatever you are, be a good one."</span></div>
+              <div class="data-stat">→ Song : <span class="highlight">"Feeling Good"</span></div>
+              <div class="data-stat">→ Movie : <span class="highlight">"Now You See Me"</span></div>
+              <div class="data-stat">→ Series : <span class="highlight">"Silicon Valley"</span></div>
+              <div class="data-stat">→ Book : <span class="highlight">"The Alchemist"</span> by Paulo Coelho</div>
+            </div>
           </div>
         </div>
         <div id="divShow2" class="container slide-in-elliptic-top-fwd">
           <div id="main_div_2" class="jumbotron">
             <h1>
-              Data,
-              <span><i class="lastUpdate">last updated: 31 December 2024</i></span>
+              Data
+              <span class="lastUpdate">last updated: 31 December 2024</span>
             </h1>
-            <p id="paragraph_2">
-              -> Github contributions in 2024 :
-              <span class="highlight">772</span>
-              <br />
-
-              -> Github contributions in 2023 :
-              <span class="highlight">443</span>
-              <br />
-           
-              -> Github contributions in 2022 :
-              <span class="highlight">163</span>
-              <br />
-
-              -> Github contributions in 2021 :
-              <span class="highlight">199</span>
-              <br />
-
-              -> The total number of credits I have earned for my bachelor's
-              degree : <span class="highlight">256</span> 
-              <br />
-
-              -> Total AA I have taken for my bachelor's degree :
-              <span class="highlight">19</span>
-              <br />
-
-              -> Total DD I have taken for my bachelor's degree :
-              <span class="highlight">1</span> 
-              <br />
-
-              -> Total FF I have taken for my bachelor's degree :
-              <span class="highlight">0</span> 
-              <br />
-
-              -> The highest credit i complete in one semester :
-              <span class="highlight">42</span> 
-              <br />
-
-              -> Total Github Repositories : 
-              <span class="highlight">41</span>
-              <br />
-
-              -> Total mobil applications I developed :
-              <span class="highlight">2</span> 
-              <br />
-
-              -> Total Web Applications I developed :
-              <span class="highlight">20+</span> 
-              <br />
-
-              -> Total Certification I have : 
-              <span class="highlight">8</span>
-              <br />
-
-              -> Total Projects I completed : 
-              <span class="highlight">10+</span>
-              <br />
-
-              -> Total Languages I know : 
-              <span class="highlight">3</span>
-              <br />
-
-              -> Total Languages I can speak properly :
-              <span class="highlight">2</span> 
-              <br />
-
-              -> Total Countries I have been : 
-              <span class="highlight">11</span>
-              <br />
-
-              -> Total Countries I have lived : 
-              <span class="highlight">5</span>
-              <br />
-
-              -> Total ML competition I have joined in Kaggle:
-              <span class="highlight">3</span> 
-              <br />
-
-              -> Total Gold medals I have won in sports:
-              <span class="highlight">2</span> 
-              <br />
-
-              -> Total Money I have lost in Crypto :
-              <span class="highlight">120$</span> 
-              <br />
-
-              -> Gain in Stock Market:
-              <span class="highlight">3x </span>
-              <br />
-
-              -> Total number times I went to cinema without paying :
-              <span class="highlight">3</span> 
-              <br />
-
-              -> Total number of times I have been in a flight :
-              <span class="highlight">23</span> 
-              <br />
-
-              -> Total number of the USA states I have been :
-              <span class="highlight">5</span> 
-              <br />
-
-              -> Total instagram post I have : 
-              <span class="highlight">1</span>
-              <br />
-
-              -> Wild rift total matches I have played :
-              <span class="highlight">3146</span>
-              <br />
-
-              -> Wild rift ranked overall win rate :
-              <span class="highlight">52.1%</span>
-              <br />
-
-              -> Wild rift ranked current-season win rate - S15 :
-              <span class="highlight">62.3%</span>
-            </p>
-            <h1>
-              2024 - New Year's Resolutions,  ( SR : 71.42% )
+            <div id="paragraph_2" style="max-width: 900px; margin: 0 auto;">
+              <div class="data-stat">→ Github contributions in 2024 : <span class="highlight">772</span></div>
+              <div class="data-stat">→ Github contributions in 2023 : <span class="highlight">443</span></div>
+              <div class="data-stat">→ Github contributions in 2022 : <span class="highlight">163</span></div>
+              <div class="data-stat">→ Github contributions in 2021 : <span class="highlight">199</span></div>
+              <div class="data-stat">→ The total number of credits I have earned for my bachelor's degree : <span class="highlight">256</span></div>
+              <div class="data-stat">→ Total AA I have taken for my bachelor's degree : <span class="highlight">19</span></div>
+              <div class="data-stat">→ Total DD I have taken for my bachelor's degree : <span class="highlight">1</span></div>
+              <div class="data-stat">→ Total FF I have taken for my bachelor's degree : <span class="highlight">0</span></div>
+              <div class="data-stat">→ The highest credit i complete in one semester : <span class="highlight">42</span></div>
+              <div class="data-stat">→ Total Github Repositories : <span class="highlight">41</span></div>
+              <div class="data-stat">→ Total mobil applications I developed : <span class="highlight">2</span></div>
+              <div class="data-stat">→ Total Web Applications I developed : <span class="highlight">20+</span></div>
+              <div class="data-stat">→ Total Certification I have : <span class="highlight">8</span></div>
+              <div class="data-stat">→ Total Projects I completed : <span class="highlight">10+</span></div>
+              <div class="data-stat">→ Total Languages I know : <span class="highlight">3</span></div>
+              <div class="data-stat">→ Total Languages I can speak properly : <span class="highlight">2</span></div>
+              <div class="data-stat">→ Total Countries I have been : <span class="highlight">11</span></div>
+              <div class="data-stat">→ Total Countries I have lived : <span class="highlight">5</span></div>
+              <div class="data-stat">→ Total ML competition I have joined in Kaggle: <span class="highlight">3</span></div>
+              <div class="data-stat">→ Total Gold medals I have won in sports: <span class="highlight">2</span></div>
+              <div class="data-stat">→ Total Money I have lost in Crypto : <span class="highlight">120$</span></div>
+              <div class="data-stat">→ Gain in Stock Market: <span class="highlight">3x</span></div>
+              <div class="data-stat">→ Total number times I went to cinema without paying : <span class="highlight">3</span></div>
+              <div class="data-stat">→ Total number of times I have been in a flight : <span class="highlight">23</span></div>
+              <div class="data-stat">→ Total number of the USA states I have been : <span class="highlight">5</span></div>
+              <div class="data-stat">→ Total instagram post I have : <span class="highlight">1</span></div>
+              <div class="data-stat">→ Wild rift total matches I have played : <span class="highlight">3146</span></div>
+              <div class="data-stat">→ Wild rift ranked overall win rate : <span class="highlight">52.1%</span></div>
+              <div class="data-stat">→ Wild rift ranked current-season win rate - S15 : <span class="highlight">62.3%</span></div>
+            </div>
+            <h1 style="margin-top: 3rem;">
+              2024 - New Year's Resolutions <span class="lastUpdate">SR : 71.42%</span>
             </h1>
-            <p >
-              &times; Learn Chinese : 
-              <span class="highlight"> (HSK level 1)  </span> 
-              <br />
+            <div style="max-width: 900px; margin: 0 auto;">
+              <div class="data-stat">✗ Learn Chinese : <span class="highlight">(HSK level 1)</span></div>
+              <div class="data-stat">✓ Travel to another country : <span class="highlight">1</span></div>
+              <div class="data-stat">✓ Complete an additional Data Science and ML course : <span class="highlight">1</span></div>
+              <div class="data-stat">✓ Invest : <span class="highlight">£4000</span></div>
+              <div class="data-stat">✓ Buy a car and obtain a driving license : <span class="highlight">:)</span></div>
+              <div class="data-stat">✗ Y-S : <span class="highlight">555</span></div>
+              <div class="data-stat">✓ Try to save more data about my sleep, walking, and exercise : <span class="highlight">:))</span></div>
+            </div>
 
-              ✓ Travel to another country : 
-              <span class="highlight"> 1 </span> 
-              <br />
-
-              ✓ Complete an additional  Data Science and ML course :  
-              <span class="highlight"> 1 </span> 
-              <br />
-
-              ✓ Invest : 
-              <span class="highlight"> £4000 </span> 
-              <br/>
-
-              ✓ Buy a car and obtain a driving license :
-              <span class="highlight"> :) </span> 
-              <br/>
-
-              &times; Y-S : 
-              <span class="highlight"> 555 </span> 
-              <br/>
-
-              ✓ Try to save more data about my sleep, walking, and exercise :
-              <span class="highlight"> :)) </span> 
-              <br/>
-
-            </p>
-            <h1>
-              2025 - New Year's Resolutions, 
+            <h1 style="margin-top: 3rem;">
+              2025 - New Year's Resolutions
             </h1>
-          
-            <p >
-              -> reach : 
-              <span class="highlight"> 78kg </span> 
-              <br />
-
-              -> Complete Google Advanced Data Analytics Professional Certificate Course - Coursera : 
-              <span class="highlight"> 1 </span> 
-              <br />
-
-              -> Establish a company : 
-              <span class="highlight"> 1 </span> 
-              <br />
-
-              -> Invest : 
-              <span class="highlight"> £4000 </span> 
-              <br/>
-
-              -> Travel to a country I've never been to before : 
-              <span class="highlight"> 1 </span> 
-              <br />
-
-              -> Retire from   : 
-              <span class="highlight"> Wild Rift </span> 
-              <br />
-
-              -> Track and collect personal data  : 
-              <span class="highlight"> CXWT </span> 
-              <br />
-
-
-
-              
-          
-            </p> 
+            <div style="max-width: 900px; margin: 0 auto;">
+              <div class="data-stat">→ Reach : <span class="highlight">78kg</span></div>
+              <div class="data-stat">→ Complete Google Advanced Data Analytics Professional Certificate Course - Coursera : <span class="highlight">1</span></div>
+              <div class="data-stat">→ Establish a company : <span class="highlight">1</span></div>
+              <div class="data-stat">→ Invest : <span class="highlight">£4000</span></div>
+              <div class="data-stat">→ Travel to a country I've never been to before : <span class="highlight">1</span></div>
+              <div class="data-stat">→ Retire from : <span class="highlight">Wild Rift</span></div>
+              <div class="data-stat">→ Track and collect personal data : <span class="highlight">CXWT</span></div>
+            </div> 
 
 
 
@@ -293,75 +185,86 @@
         </div>
         <div id="divShow3" class="container slide-in-elliptic-top-fwd">
           <div id="main_div_3" class="jumbotron">
-            <h1>Portfolio,</h1>
-            <p id="paragraph_3">
-              -> <span class="highlight">Coding Languages</span> : Python, R, Javascript, PHP, SQL, Dart <br/>
-              -> <span class="highlight">Frameworks</span> : Laravel, Bootstrap, jQuery, Vue.js, React.js, Node.js, Express.js, Flatter <br/>
-              -> <span class="highlight">Libraries</span> : Tensorflow, Keras, Scikit-learn, Matplotlib, Seaborn, Numpy, Pandas, D3.js ... <br/>
-              -> <span class="highlight">Databases</span> : MySQL, MongoDB, Firebase, SQLite <br/>
-              -> <span class="highlight">Tools</span> :  Git, Github, Gitlab, Jupyter Notebook, Google Colab, Anaconda, Pycharm, Visual Studio Code, Tableu <br/>
-              <hr>
+            <h1>Portfolio</h1>
+            <div style="max-width: 900px; margin: 0 auto;">
+              <h2 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Technical Skills</h2>
+              <div class="data-stat">→ Coding Languages : <span class="highlight">Python, R, Javascript, PHP, SQL, Dart</span></div>
+              <div class="data-stat">→ Frameworks : <span class="highlight">Laravel, Bootstrap, jQuery, Vue.js, React.js, Node.js, Express.js, Flutter</span></div>
+              <div class="data-stat">→ Libraries : <span class="highlight">TensorFlow, Keras, Scikit-learn, Matplotlib, Seaborn, NumPy, Pandas, D3.js</span></div>
+              <div class="data-stat">→ Databases : <span class="highlight">MySQL, MongoDB, Firebase, SQLite</span></div>
+              <div class="data-stat">→ Tools : <span class="highlight">Git, GitHub, GitLab, Jupyter Notebook, Google Colab, Anaconda, PyCharm, Visual Studio Code, Tableau</span></div>
+              
+              <h2 style="font-size: 1.75rem; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: 600;">Projects</h2>
 
               <!-- PORTFOLIO  -->
-                    <span class="highlight"> Puzzlo.me</span>
-              <div class="container">
-                <div class="row">
-                  <div id="image4col" class="col col-0 col-xl-4">
-                    
-                    <img src="./images/1.png" class="img-fluid my-2" alt="...">
-                  </div>
-                  <div class="col col-12 col-xl-8 ">
-                    &nbsp;|-> ReactJS, MongoDB, Express.js, Node.js <br>
-                    &nbsp;|-> Puzzlo is an intriguing and user-friendly game. </br>
-                    &nbsp;|-> Players must discover the daily pin or password to increase their score, based on the time of discovery within the day.<br>
-                    <a href="https://puzzlo.me/" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span> Go to the website</a>
+              <div class="portfolio-item">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Puzzlo.me</h3>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div id="image4col" class="col-12 col-md-5 col-xl-4 mb-3 mb-md-0">
+                      <img src="./images/1.png" class="img-fluid" alt="Puzzlo.me">
+                    </div>
+                    <div class="col-12 col-md-7 col-xl-8">
+                      <p style="margin: 0; line-height: 1.8;">
+                        <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">ReactJS • MongoDB • Express.js • Node.js</span><br>
+                        Puzzlo is an intriguing and user-friendly game where players must discover the daily pin or password to increase their score, based on the time of discovery within the day.<br>
+                        <a href="https://puzzlo.me/" target="_blank">Visit Website →</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-
-
-              <span class="highlight"> Developing a Real-time House Collapse Tracking Website for Disaster Relief Based on Manual Input</span>
-              <div class="container">
-                <div class="row">
-                  <div id="image1col" class="col col-0 col-xl-4">
-                  <img src="./images/2.png" class="img-fluid my-2" alt="..." >
-                  </div>
-                  <div class="col col-12 col-xl-8">
-                    &nbsp;|-> VueJS, MongoDB, Express.js, Node.js, D3.js, Tenserflow <br>
-                    &nbsp;|-> Developing a full-stack web application involves visualizing and analyzing data, as well as implementing machine learning algorithm. <br>
-                    &nbsp;|-> Master Dissertation Project <br>
+              <div class="portfolio-item">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Real-time House Collapse Tracking</h3>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div id="image1col" class="col-12 col-md-5 col-xl-4 mb-3 mb-md-0">
+                      <img src="./images/2.png" class="img-fluid" alt="House Collapse Tracking">
+                    </div>
+                    <div class="col-12 col-md-7 col-xl-8">
+                      <p style="margin: 0; line-height: 1.8;">
+                        <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">VueJS • MongoDB • Express.js • Node.js • D3.js • TensorFlow</span><br>
+                        A full-stack web application for disaster relief that visualizes and analyzes data, implementing machine learning algorithms to track house collapses in real-time.<br>
+                        <span class="highlight">Master Dissertation Project</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
              
-              <span class="highlight"> UK Housing Market Visualisation</span>
-              <div class="container">
-                <div class="row">
-                  <div id="image2col" class="col col-0 col-xl-4">
-                    <img src="./images/3.png" class="img-fluid my-2 " alt="..." >
-                  </div>
-                  <div class="col col-12 col-xl-8">
-                    &nbsp;|-> HTML, CSS, D3.js, Tableau, R <br>
-                    &nbsp;|-> An interactive web application that provides insights into the UK housing market.<br>
-                    &nbsp;|-> Utilizes the comprehensive UK-HPI-full-file-2022-12.csv file, featuring around 140,000 data points, 54 columns, and 421 unique regions <br>
-                    <a href="https://ukhousingmarket.netlify.app" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span> Go to the website</a>
-          
+              <div class="portfolio-item">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">UK Housing Market Visualisation</h3>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div id="image2col" class="col-12 col-md-5 col-xl-4 mb-3 mb-md-0">
+                      <img src="./images/3.png" class="img-fluid" alt="UK Housing Market">
+                    </div>
+                    <div class="col-12 col-md-7 col-xl-8">
+                      <p style="margin: 0; line-height: 1.8;">
+                        <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">HTML • CSS • D3.js • Tableau • R</span><br>
+                        An interactive web application providing insights into the UK housing market, utilizing a comprehensive dataset with ~140,000 data points, 54 columns, and 421 unique regions.<br>
+                        <a href="https://ukhousingmarket.netlify.app" target="_blank">Visit Website →</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-             <span class="highlight"> Nano Mascot Generator</span>
-              <div class="container">
-                <div class="row">
-                  <div id="image3col" class="col col-0 col-xl-4">
-                    <img src="./images/4.png" class="img-fluid my-2" alt="...">
-                  </div>
-                  <div class="col col-12 col-xl-8">
-                    &nbsp;|-> React.js, HTML, CSS, Bootstrap, and JavaScript <br>
-                    &nbsp;|-> A web application that generates a nano mascots representing Nano Coin(XNO)<br>
-                    &nbsp;|-> Showcases support for Nano Coin and crypto enthusiasm <br>
-                    <a href="https://nano-mascot.netlify.app/" style="text-decoration: none;"  target="_blank"><span>&nbsp;|-></span> Go to the website</a>
+              <div class="portfolio-item">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Nano Mascot Generator</h3>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div id="image3col" class="col-12 col-md-5 col-xl-4 mb-3 mb-md-0">
+                      <img src="./images/4.png" class="img-fluid" alt="Nano Mascot Generator">
+                    </div>
+                    <div class="col-12 col-md-7 col-xl-8">
+                      <p style="margin: 0; line-height: 1.8;">
+                        <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">React.js • HTML • CSS • Bootstrap • JavaScript</span><br>
+                        A creative web application that generates nano mascots representing Nano Coin (XNO), showcasing support for cryptocurrency innovation.<br>
+                        <a href="https://nano-mascot.netlify.app/" target="_blank">Visit Website →</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -386,16 +289,16 @@
 
 
 
-              . <br>
-               . <br>
-               .<br>
-               Of course, there are more projects in my GitHub account...<br>
-              &nbsp;|-> I will be updating this section very very soon :))<br>
-              &nbsp;|-> I hope you like my portfolio <br>
-              &nbsp;|-> if you have any questions, please contact me : 
-              <a class="highlight text-center" href="mailto:tekinayfurkan@gmail.com">tekinayfurkan@gmail.com</a><br>
-           
-            </p>
+              <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(245, 245, 247, 0.5); border-radius: 12px;">
+                <p style="margin: 0; line-height: 1.8;">
+                  Of course, there are more projects in my GitHub account...<br>
+                  I will be updating this section very soon :)<br><br>
+                  I hope you like my portfolio<br>
+                  If you have any questions, please contact me:<br>
+                  <a href="mailto:tekinayfurkan@gmail.com" style="color: #06c; font-weight: 500;">tekinayfurkan@gmail.com</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -411,6 +314,23 @@
       const link1 = document.getElementById("link1");
       const link2 = document.getElementById("link2");
       const link3 = document.getElementById("link3");
+      const brandLink = document.getElementById("brandLink");
+
+      // Brand link - go to home (About Me section)
+      brandLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("divShow1").style.display = "block";
+        document.getElementById("divShow2").style.display = "none";
+        document.getElementById("divShow3").style.display = "none";
+        
+        // Update active state on nav links
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(link => link.classList.remove("active"));
+        link1.classList.add("active");
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
 
       link1.addEventListener("click", function () {
         document.getElementById("divShow1").style.display = "block";
@@ -431,20 +351,9 @@
       });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
-    <script>
-      VANTA.BIRDS({
-        el: "#body",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00
-      })
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./app.js"></script>
+  </body>
+</html>
   </body>
 </html>
