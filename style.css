@@ -282,24 +282,7 @@ h1 {
   color: var(--primary-bg);
 }
 
-/* Profile Image */
-img[alt="Furkan Tekinay"] {
-  border-radius: 50%;
-  border: none;
-  padding: 0;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  margin: 0 auto 2rem;
-  display: block;
-  transition: var(--transition-smooth);
-}
-
-img[alt="Furkan Tekinay"]:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
-}
+/* Profile Image - handled by .profile-cinematic-image class */
 
 /* Portfolio Project Images */
 .img-fluid {
@@ -368,6 +351,57 @@ a:hover {
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   display: inline-block;
+}
+
+/* Cinematic Profile Photo */
+.profile-photo-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 21 / 9; /* Ultra-wide cinematic ratio */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background: var(--secondary-bg);
+}
+
+.profile-cinematic-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  /* 
+   * ═══════════════════════════════════════════════════════════
+   * 📐 EASY IMAGE ALIGNMENT SETTINGS
+   * ═══════════════════════════════════════════════════════════
+   * Adjust these two values to perfectly position your image:
+   * 
+   * HORIZONTAL (left to right):
+   *   - left, center, right
+   *   - OR percentage: 0% (far left), 50% (center), 100% (far right)
+   * 
+   * VERTICAL (top to bottom):
+   *   - top, center, bottom
+   *   - OR percentage: 0% (top), 50% (middle), 100% (bottom)
+   * 
+   * Examples:
+   *   object-position: center top;      - Centered, show top (good for face)
+   *   object-position: center 20%;      - Centered, 20% from top
+   *   object-position: left 30%;        - Left side, 30% from top
+   *   object-position: 60% 15%;         - 60% from left, 15% from top
+   */
+  object-position: center 25%;
+  
+  display: block;
+}
+
+/* NO hover animation - image stays static */
+
+/* Responsive adjustments for profile photo */
+@media (max-width: 768px) {
+  .profile-photo-container {
+    aspect-ratio: 16 / 9; /* Slightly less wide on mobile */
+  }
 }
 
 /* Portfolio Section Spacing */
