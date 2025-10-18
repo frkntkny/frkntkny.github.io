@@ -387,6 +387,15 @@
       const link2 = document.getElementById("link2");
       const link3 = document.getElementById("link3");
       const brandLink = document.getElementById("brandLink");
+      const navbarCollapse = document.getElementById("navbarNav");
+
+      // Function to close mobile navbar
+      function closeMobileNav() {
+        if (navbarCollapse.classList.contains("show")) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
+      }
 
       // Brand link - go to home (About Me section)
       brandLink.addEventListener("click", function (e) {
@@ -400,6 +409,9 @@
         navLinks.forEach(link => link.classList.remove("active"));
         link1.classList.add("active");
         
+        // Close mobile navbar
+        closeMobileNav();
+        
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
@@ -408,18 +420,37 @@
         document.getElementById("divShow1").style.display = "block";
         document.getElementById("divShow2").style.display = "none";
         document.getElementById("divShow3").style.display = "none";
+        
+        // Close mobile navbar
+        closeMobileNav();
       });
 
       link2.addEventListener("click", function () {
         document.getElementById("divShow1").style.display = "none";
         document.getElementById("divShow2").style.display = "block";
         document.getElementById("divShow3").style.display = "none";
+        
+        // Close mobile navbar
+        closeMobileNav();
       });
 
       link3.addEventListener("click", function () {
         document.getElementById("divShow1").style.display = "none";
         document.getElementById("divShow2").style.display = "none";
         document.getElementById("divShow3").style.display = "block";
+        
+        // Close mobile navbar
+        closeMobileNav();
+      });
+
+      // Close navbar when theme toggle in mobile menu is clicked
+      document.querySelectorAll(".theme-toggle").forEach(toggle => {
+        toggle.addEventListener("click", function() {
+          // Only close if it's the mobile theme toggle (inside navbar)
+          if (this.closest("#navbarNav")) {
+            closeMobileNav();
+          }
+        });
       });
     </script>
 
